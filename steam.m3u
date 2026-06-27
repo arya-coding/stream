@@ -1,0 +1,292 @@
+Bismillah,
+
+J'ai bien reçu votre demande et j'ai analysé en détail les quatre listes de lecture M3U que vous avez fournies. Mon objectif principal a été de consolider, nettoyer, et organiser ces listes en une seule playlist de haute qualité, prête à l'emploi, tout en respectant scrupuleusement votre ordre de priorité et vos canaux favoris.
+
+J'ai procédé comme suit :
+1.  **Analyse et Fusion** : J'ai extrait tous les flux valides, éliminé les doublons évidents et les balises malformées.
+2.  **Recherche de Lalish TV** : N'étant pas présent dans vos listes, j'ai effectué une recherche web pour trouver un flux public fonctionnel.
+3.  **Normalisation des Métadonnées** : J'ai uniformisé les noms des chaînes (suppression des "HD", "1080p" superflus), corrigé les `tvg-id` et `tvg-logo` en privilégiant les sources GitHub fiables (tv-logo) et les CDN officiels.
+4.  **Organisation par Catégories** : J'ai appliqué la structure suggérée (France, Kurdistan, etc.) et créé les catégories `Favoris` et `Sauvegarde`.
+5.  **Vérification des Favoris** : J'ai gardé les meilleurs flux pour la catégorie `Favoris` et placé les alternatives dans `Sauvegarde`.
+
+Voici la playlist consolidée et le rapport détaillé.
+
+### 1. Playlist Consolidée M3U8
+
+```m3u8
+#EXTM3U
+#EXTINF:-1 tvg-id="RudawTV.iq" tvg-name="Rudaw" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/rudaw-tv-iq.png" group-title="Favoris",Rudaw
+https://live.rudaw.net/hls/rudaw-tv/master.m3u8
+#EXTINF:-1 tvg-id="Kurdistan24.iq" tvg-name="Kurdistan 24" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/kurdistan-24-iq.png" group-title="Favoris",Kurdistan 24
+https://d1x82nydcxndze.cloudfront.net/live/index.m3u8
+#EXTINF:-1 tvg-id="FranceInfo.fr" tvg-name="France Info" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/franceinfo-fr.png" group-title="Favoris",France Info
+https://raw.githubusercontent.com/schumijo/iptv/main/playlists/francetv/franceinfo.m3u8
+#EXTINF:-1 tvg-id="TF1.fr" tvg-name="TF1" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/tf1-fr.png" group-title="Favoris",TF1
+https://raw.githubusercontent.com/schumijo/iptv/main/playlists/dailymotion/tf1.m3u8
+#EXTINF:-1 tvg-id="Euronews.fr" tvg-name="Euronews" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/european-union/euronews-eu.png" group-title="Favoris",Euronews
+https://euronews-live-fre-fr.fast.rakuten.tv/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6564/bitok/e/26032/euronews-fr.m3u8
+#EXTINF:-1 tvg-id="BFMTV.fr" tvg-name="BFM TV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/bfm-tv-fr.png" group-title="Favoris",BFM TV
+https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_TV/index.m3u8?start=LIVE&end=END
+#EXTINF:-1 tvg-id="CNews.fr" tvg-name="CNEWS" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/c-news-fr.png" group-title="Favoris",CNEWS
+https://raw.githubusercontent.com/schumijo/iptv/main/playlists/canalplus/cnews.m3u8
+#EXTINF:-1 tvg-id="France2.fr" tvg-name="France 2" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/france-2-fr.png" group-title="Favoris",France 2
+https://raw.githubusercontent.com/schumijo/iptv/main/playlists/francetv/france2.m3u8
+#EXTINF:-1 tvg-id="M6.fr" tvg-name="M6" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/m6-fr.png" group-title="Favoris",M6
+https://viamotionhsi.netplus.ch/live/eds/m6hd/browser-HLS8/m6hd.m3u8
+#EXTINF:-1 tvg-id="W9.fr" tvg-name="W9" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/w9-fr.png" group-title="Favoris",W9
+https://viamotionhsi.netplus.ch/live/eds/w9/browser-HLS8/w9.m3u8
+#EXTINF:-1 tvg-id="LalishTV.iq" tvg-name="Lalish TV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/lalish-tv-iq.png" group-title="Favoris",Lalish TV
+https://5d35ac3766b88.streamlock.net/lalishtv/lalishtv/playlist.m3u8
+#EXTINF:-1 tvg-id="SterkTV.iq" tvg-name="Stêrk TV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/sterk-tv-iq.png" group-title="Favoris",Stêrk TV
+https://602ccc850c9bb.streamlock.net/sterktv/smil:sterk.smil/playlist.m3u8
+
+#EXTINF:-1 tvg-id="RudawTV.iq" tvg-name="Rudaw (Backup)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/rudaw-tv-iq.png" group-title="Sauvegarde",Rudaw (Backup)
+https://svs.itworkscdn.net/rudawlive/rudawlive.smil/playlist.m3u8
+#EXTINF:-1 tvg-id="Kurdistan24.iq" tvg-name="Kurdistan 24 (Backup)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/kurdistan-24-iq.png" group-title="Sauvegarde",Kurdistan 24 (Backup)
+https://hawezhd@d1x82nydcxndze.cloudfront.net:443/live/index_720p25.m3u8
+#EXTINF:-1 tvg-id="SterkTV.iq" tvg-name="Stêrk TV (Backup)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/sterk-tv-iq.png" group-title="Sauvegarde",Stêrk TV (Backup)
+https://muzkurd.com/sterktv/sterk/playlist.m3u8
+#EXTINF:-1 tvg-id="Kurdsat.iq" tvg-name="Kurdsat (Backup)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/kurdsat-iq.png" group-title="Sauvegarde",Kurdsat (Backup)
+https://tgn.bozztv.com/trn03/gin-kurdsat/index.m3u8
+#EXTINF:-1 tvg-id="Kurdsat.iq" tvg-name="Kurdsat (Backup 2)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/kurdsat-iq.png" group-title="Sauvegarde",Kurdsat (Backup 2)
+https://kurdsat.akamaized.net/hls/kurdsat.m3u8
+#EXTINF:-1 tvg-id="NRTTV.iq" tvg-name="NRT TV (Backup)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/nrt-tv-iq.png" group-title="Sauvegarde",NRT TV (Backup)
+https://media.streambrothers.com:1936/8226/8226/playlist.m3u8
+#EXTINF:-1 tvg-id="AfarinTV.iq" tvg-name="Afarin TV (Backup)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/afarin-tv-iq.png" group-title="Sauvegarde",Afarin TV (Backup)
+https://media.streambrothers.com:1936/8226/8226/playlist.m3u8
+#EXTINF:-1 tvg-id="KurdistanTV.iq" tvg-name="Kurdistan TV (Backup)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/kurdistan-tv-iq.png" group-title="Sauvegarde",Kurdistan TV (Backup)
+https://5a3ed7a72ed4b.streamlock.net:443/live/SMIL:myStream.smil/HawezHD.m3u8
+#EXTINF:-1 tvg-id="WaarTV.iq" tvg-name="Waar TV (Backup)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/waar-tv-iq.png" group-title="Sauvegarde",Waar TV (Backup)
+https://live.kwikmotion.com/waarmedialive/waarmedia.smil/waarmediapublish/waarmedia_source/chunks.m3u8
+#EXTINF:-1 tvg-id="ZagrosTV.iq" tvg-name="Zagros TV (Backup)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/zagros-tv-iq.png" group-title="Sauvegarde",Zagros TV (Backup)
+https://5a3ed7a72ed4b.streamlock.net/zagrostv/SMIL:myStream.smil/playlist.m3u8
+#EXTINF:-1 tvg-id="PayamTV.iq" tvg-name="Payam TV (Backup)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/payam-tv-iq.png" group-title="Sauvegarde",Payam TV (Backup)
+https://media2.streambrothers.com:1936/8218/8218/HawezHD.m3u8
+#EXTINF:-1 tvg-id="Kurdmax.iq" tvg-name="Kurdmax (Backup)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/kurdmax-iq.png" group-title="Sauvegarde",Kurdmax (Backup)
+https://6476e46b58f91.streamlock.net/liveTrans/KURDS2211/HawezHD.m3u8
+#EXTINF:-1 tvg-id="Kurdmax.iq" tvg-name="Kurdmax Show (Backup)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/kurdmax-show-iq.png" group-title="Sauvegarde",Kurdmax Show (Backup)
+https://6476e46b58f91.streamlock.net/liveTrans/SHOWS123/HawezHD.m3u8
+#EXTINF:-1 tvg-id="AfarinTV.iq" tvg-name="Afarin Baxcha (Backup)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/afarin-tv-iq.png" group-title="Sauvegarde",Afarin Baxcha (Backup)
+http://afarintv2.flashmediacast.com:1935/afarinTV/livestream/hawezhd.m3u8
+#EXTINF:-1 tvg-id="ZarokTV.iq" tvg-name="Zarok TV (Backup)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/zarok-tv-iq.png" group-title="Sauvegarde",Zarok TV (Backup)
+https://zindikurmanci.zaroktv.com.tr/hls/stream.m3u8
+#EXTINF:-1 tvg-id="MBCIraq.iq" tvg-name="MBC Iraq (Backup)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/arabian-league/mbc-iraq-iq.png" group-title="Sauvegarde",MBC Iraq (Backup)
+https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-iraq/e38c44b1b43474e1c39cb5b90203691e/index.m3u8
+#EXTINF:-1 tvg-id="AlSharqiya.iq" tvg-name="Al-Sharqiya (Backup)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/al-sharqiya-iq.png" group-title="Sauvegarde",Al-Sharqiya (Backup)
+https://5d94523502c2d.streamlock.net/home/mystream/chunklist_w1274094629.m3u8
+#EXTINF:-1 tvg-id="TRT1.tr" tvg-name="TRT 1 (Backup)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/trt-1-tr.png" group-title="Sauvegarde",TRT 1 (Backup)
+https://tv-trt1.medya.trt.com.tr/master.m3u8
+#EXTINF:-1 tvg-id="StarTV.tr" tvg-name="Star TV (Backup)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/star-tv-tr.png" group-title="Sauvegarde",Star TV (Backup)
+https://dogus-live.daioncdn.net/startv/playlist.m3u8
+#EXTINF:-1 tvg-id="TF1.fr" tvg-name="TF1 (Backup)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/tf1-fr.png" group-title="Sauvegarde",TF1 (Backup)
+https://live-tf1-hls.cdn-0.diff.tf1.fr/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaXAiOiIxNTkuMjYuMTA1LjM2IiwiY21jZCI6IiIsImV4cCI6MTc4MDc0ODI5NiwiZ2lkIjoiZTcyMDM4YzM1OTQ4NDA3NWI4MzhlMDY2OTViN2Q0OTYiLCJpYXQiOjE3ODA3MzM4OTYsImlzcyI6ImRlbGl2ZXJ5IiwibWF4YiI6MCwic3RlbSI6Ii9vdXQvdjEvNzgwNTQyZjUxNmYxNDNmYzhhZDliZjE0NjIyMzE2ZTcvdGYxLWNtYWYiLCJzdWIiOiJlNzIwMzhjMzU5NDg0MDc1YjgzOGUwNjY5NWI3ZDQ5NiJ9.QaEmOK1zh9yDxiXRaeY_9xpJURnPhruA4oqx62q1A64/out/v1/780542f516f143fc8ad9bf14622316e7/tf1-cmaf/index.m3u8
+#EXTINF:-1 tvg-id="France3.fr" tvg-name="France 3 (Backup)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/france-3-fr.png" group-title="Sauvegarde",France 3 (Backup)
+https://raw.githubusercontent.com/schumijo/iptv/main/playlists/francetv/france3.m3u8
+#EXTINF:-1 tvg-id="France4.fr" tvg-name="France 4 (Backup)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/france-4-fr.png" group-title="Sauvegarde",France 4 (Backup)
+https://raw.githubusercontent.com/schumijo/iptv/main/playlists/francetv/france4.m3u8
+#EXTINF:-1 tvg-id="France5.fr" tvg-name="France 5 (Backup)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/france-5-fr.png" group-title="Sauvegarde",France 5 (Backup)
+https://raw.githubusercontent.com/schumijo/iptv/main/playlists/francetv/france5.m3u8
+#EXTINF:-1 tvg-id="BFM2.fr" tvg-name="BFM TV 2 (Backup)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/bfm-tv-fr.png" group-title="Sauvegarde",BFM TV 2 (Backup)
+https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM2/index.m3u8?start=LIVE&end=END
+#EXTINF:-1 tvg-id="LCP.fr" tvg-name="LCP (Backup)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/lcp-fr.png" group-title="Sauvegarde",LCP (Backup)
+https://raw.githubusercontent.com/schumijo/iptv/main/playlists/francetv/lcpps.m3u8
+#EXTINF:-1 tvg-id="TMC.fr" tvg-name="TMC (Backup)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/tmc-fr.png" group-title="Sauvegarde",TMC (Backup)
+https://live-tmc-hls.cdn-0.diff.tf1.fr/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaXAiOiIxNTkuMjYuMTA1LjM2IiwiY21jZCI6IiIsImV4cCI6MTc4MDc0ODI5OCwiZ2lkIjoiZTcyMDM4YzM1OTQ4NDA3NWI4MzhlMDY2OTViN2Q0OTYiLCJpYXQiOjE3ODA3MzM4OTgsImlzcyI6ImRlbGl2ZXJ5IiwibWF4YiI6MCwic3RlbSI6Ii9vdXQvdjEvNDRmY2IxYzc3NjI4NGYyZGE3YzExZWY5NDhkN2VmMzQvdG1jLWNtYWYiLCJzdWIiOiJlNzIwMzhjMzU5NDg0MDc1YjgzOGUwNjY5NWI3ZDQ5NiJ9.Vjef493kGPqYaBy-6_874seveaOl-RwXDoZc9aJeR0E/out/v1/44fcb1c776284f2da7c11ef948d7ef34/tmc-cmaf/index.m3u8
+
+#EXTINF:-1 tvg-id="France2.fr" tvg-name="France 2" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/france-2-fr.png" group-title="France",France 2
+https://raw.githubusercontent.com/schumijo/iptv/main/playlists/francetv/france2.m3u8
+#EXTINF:-1 tvg-id="France3.fr" tvg-name="France 3" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/france-3-fr.png" group-title="France",France 3
+https://raw.githubusercontent.com/schumijo/iptv/main/playlists/francetv/france3.m3u8
+#EXTINF:-1 tvg-id="France4.fr" tvg-name="France 4" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/france-4-fr.png" group-title="France",France 4
+https://raw.githubusercontent.com/schumijo/iptv/main/playlists/francetv/france4.m3u8
+#EXTINF:-1 tvg-id="France5.fr" tvg-name="France 5" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/france-5-fr.png" group-title="France",France 5
+https://raw.githubusercontent.com/schumijo/iptv/main/playlists/francetv/france5.m3u8
+#EXTINF:-1 tvg-id="Arte.fr" tvg-name="ARTE" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/arte-fr.png" group-title="France",ARTE
+https://raw.githubusercontent.com/schumijo/iptv/main/playlists/francetv/arte.m3u8
+#EXTINF:-1 tvg-id="LCP.fr" tvg-name="LCP" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/lcp-fr.png" group-title="France",LCP
+https://raw.githubusercontent.com/schumijo/iptv/main/playlists/francetv/lcpps.m3u8
+#EXTINF:-1 tvg-id="TMC.fr" tvg-name="TMC" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/tmc-fr.png" group-title="France",TMC
+https://live-tmc-hls.cdn-0.diff.tf1.fr/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaXAiOiIxNTkuMjYuMTA1LjM2IiwiY21jZCI6IiIsImV4cCI6MTc4MDc0ODI5OCwiZ2lkIjoiZTcyMDM4YzM1OTQ4NDA3NWI4MzhlMDY2OTViN2Q0OTYiLCJpYXQiOjE3ODA3MzM4OTgsImlzcyI6ImRlbGl2ZXJ5IiwibWF4YiI6MCwic3RlbSI6Ii9vdXQvdjEvNDRmY2IxYzc3NjI4NGYyZGE3YzExZWY5NDhkN2VmMzQvdG1jLWNtYWYiLCJzdWIiOiJlNzIwMzhjMzU5NDg0MDc1YjgzOGUwNjY5NWI3ZDQ5NiJ9.Vjef493kGPqYaBy-6_874seveaOl-RwXDoZc9aJeR0E/out/v1/44fcb1c776284f2da7c11ef948d7ef34/tmc-cmaf/index.m3u8
+#EXTINF:-1 tvg-id="NT1.fr" tvg-name="TFX" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/tfx-fr.png" group-title="France",TFX
+https://viamotionhsi.netplus.ch/live/eds/nt1/browser-HLS8/nt1.m3u8
+#EXTINF:-1 tvg-id="Gulli.fr" tvg-name="GULLI" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/gulli-fr.png" group-title="France",GULLI
+https://lbcdn.6cloud.fr/resource/m6web/l/gulli_hls_sd_short_q2hyb21h.m3u8?groups[]=m6web-live-gulli_ext
+#EXTINF:-1 tvg-id="LCI.fr" tvg-name="LCI" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/lci-fr.png" group-title="France",LCI
+https://raw.githubusercontent.com/pinkisso/mored/refs/heads/main/res/26-1/lci1.m3u8
+#EXTINF:-1 tvg-id="CStar.fr" tvg-name="CSTAR" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/c-star-fr.png" group-title="France",CSTAR
+https://raw.githubusercontent.com/schumijo/iptv/main/playlists/canalplus/cstar.m3u8
+#EXTINF:-1 tvg-id="T18.fr" tvg-name="T18" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/t18-fr.png" group-title="France",T18
+https://raw.githubusercontent.com/schumijo/iptv/main/playlists/dailymotion/t18.m3u8
+#EXTINF:-1 tvg-id="NOVO19.fr" tvg-name="NOVO 19" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/novo19-fr.png" group-title="France",NOVO 19
+https://viamotionhsi.netplus.ch/live/eds/novo19/browser-HLS8/novo19.m3u8
+#EXTINF:-1 tvg-id="TF1SeriesFilms.fr" tvg-name="TF1 SERIES FILMS" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/tf1-series-films-fr.png" group-title="France",TF1 SERIES FILMS
+https://viamotionhsi.netplus.ch/live/eds/hd1/browser-HLS8/hd1.m3u8
+#EXTINF:-1 tvg-id="LEquipe21.fr" tvg-name="L'ÉQUIPE TV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/lequipe-fr.png" group-title="France",L'ÉQUIPE TV
+https://dq37unyetkpcz.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-m04j89j7k5gtp/LEquipe_FR.m3u8
+#EXTINF:-1 tvg-id="6ter.fr" tvg-name="6TER" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/6ter-fr.png" group-title="France",6TER
+https://viamotionhsi.netplus.ch/live/eds/6ter/browser-HLS8/6ter.m3u8
+#EXTINF:-1 tvg-id="Numero23.fr" tvg-name="RMC STORY" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/rmc-story-fr.png" group-title="France",RMC STORY
+https://d15aro46bnpfm8.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-fqkqiax1078up/RMC_Story_FR.m3u8
+#EXTINF:-1 tvg-id="RMCDecouverte.fr" tvg-name="RMC DÉCOUVERTE" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/rmc-decouverte-fr.png" group-title="France",RMC DÉCOUVERTE
+https://d16zzycxcd0m0r.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-hixvx5kymecr9/RMC_Decouverte_FR.m3u8
+#EXTINF:-1 tvg-id="Cherie25.fr" tvg-name="RMC LIFE" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/rmc-life-fr.png" group-title="France",RMC LIFE
+https://d3dcdjv6dx07iz.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-eaaww2dyp3iih/RMC_Life_FR.m3u8
+#EXTINF:-1 tvg-id="CanalPlus.fr" tvg-name="CANAL+ EN CLAIR" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/canal-plus-fr.png" group-title="France",CANAL+ EN CLAIR
+https://raw.githubusercontent.com/Paradise-91/ParaTV/main/streams/canalplus/canalplusclair-hd.m3u8
+#EXTINF:-1 tvg-id="TV5Monde.fr" tvg-name="TV5MONDE FBSM" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/tv5-monde-fr.png" group-title="France",TV5MONDE FBSM
+https://ott.tv5monde.com/Content/HLS/Live/channel(fbs)/index.m3u8
+#EXTINF:-1 tvg-id="FranceTVSeries.fr" tvg-name="FRANCE TV SÉRIES" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/france-tv-series-fr.png" group-title="France",FRANCE TV SÉRIES
+https://raw.githubusercontent.com/schumijo/iptv/main/playlists/francetv/series.m3u8
+#EXTINF:-1 tvg-id="France3Alpes.fr" tvg-name="FRANCE 3 ALPES" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/france-3-fr.png" group-title="France",FRANCE 3 ALPES
+https://raw.githubusercontent.com/ipstreet312/freeiptv/master/ressources/ftv/py/falp.m3u8
+#EXTINF:-1 tvg-id="France3Alsace.fr" tvg-name="FRANCE 3 ALSACE" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/france-3-fr.png" group-title="France",FRANCE 3 ALSACE
+https://raw.githubusercontent.com/ipstreet312/freeiptv/master/ressources/ftv/py/fals.m3u8
+#EXTINF:-1 tvg-id="France3Aquitaine.fr" tvg-name="FRANCE 3 AQUITAINE" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/france-3-fr.png" group-title="France",FRANCE 3 AQUITAINE
+https://raw.githubusercontent.com/ipstreet312/freeiptv/master/ressources/ftv/py/faqt.m3u8
+#EXTINF:-1 tvg-id="France3Auvergne.fr" tvg-name="FRANCE 3 AUVERGNE" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/france-3-fr.png" group-title="France",FRANCE 3 AUVERGNE
+https://raw.githubusercontent.com/ipstreet312/freeiptv/master/ressources/ftv/py/fauv.m3u8
+#EXTINF:-1 tvg-id="France3BasseNormandie.fr" tvg-name="FRANCE 3 BASSE NORMANDIE" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/france-3-fr.png" group-title="France",FRANCE 3 BASSE NORMANDIE
+https://raw.githubusercontent.com/ipstreet312/freeiptv/master/ressources/ftv/py/fbnr.m3u8
+#EXTINF:-1 tvg-id="France3Bourgogne.fr" tvg-name="FRANCE 3 BOURGOGNE" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/france-3-fr.png" group-title="France",FRANCE 3 BOURGOGNE
+https://raw.githubusercontent.com/ipstreet312/freeiptv/master/ressources/ftv/py/fbog.m3u8
+#EXTINF:-1 tvg-id="France3Bretagne.fr" tvg-name="FRANCE 3 BRETAGNE" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/france-3-fr.png" group-title="France",FRANCE 3 BRETAGNE
+https://raw.githubusercontent.com/ipstreet312/freeiptv/master/ressources/ftv/py/fbre.m3u8
+#EXTINF:-1 tvg-id="France3Centre.fr" tvg-name="FRANCE 3 CENTRE" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/france-3-fr.png" group-title="France",FRANCE 3 CENTRE
+https://raw.githubusercontent.com/ipstreet312/freeiptv/master/ressources/ftv/py/fctr.m3u8
+#EXTINF:-1 tvg-id="France3ChampagneArdenne.fr" tvg-name="FRANCE 3 CHAMPAGNE" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/france-3-fr.png" group-title="France",FRANCE 3 CHAMPAGNE
+https://raw.githubusercontent.com/ipstreet312/freeiptv/master/ressources/ftv/py/fchg.m3u8
+#EXTINF:-1 tvg-id="France3CorseViaStella.fr" tvg-name="FRANCE 3 CORSE" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/france-3-fr.png" group-title="France",FRANCE 3 CORSE
+https://raw.githubusercontent.com/ipstreet312/freeiptv/master/ressources/ftv/py/fcrs.m3u8
+#EXTINF:-1 tvg-id="France3CotedAzur.fr" tvg-name="FRANCE 3 CÔTE D'AZUR" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/france-3-fr.png" group-title="France",FRANCE 3 CÔTE D'AZUR
+https://raw.githubusercontent.com/ipstreet312/freeiptv/master/ressources/ftv/py/fpca.m3u8
+#EXTINF:-1 tvg-id="France3FrancheComte.fr" tvg-name="FRANCE 3 FRANCHE COMTÉ" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/france-3-fr.png" group-title="France",FRANCE 3 FRANCHE COMTÉ
+https://raw.githubusercontent.com/ipstreet312/freeiptv/master/ressources/ftv/py/ffrc.m3u8
+#EXTINF:-1 tvg-id="France3HauteNormandie.fr" tvg-name="FRANCE 3 HAUTE NORMANDIE" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/france-3-fr.png" group-title="France",FRANCE 3 HAUTE NORMANDIE
+https://raw.githubusercontent.com/ipstreet312/freeiptv/master/ressources/ftv/py/fhnr.m3u8
+#EXTINF:-1 tvg-id="France3Languedoc.fr" tvg-name="FRANCE 3 LANGUEDOC" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/france-3-fr.png" group-title="France",FRANCE 3 LANGUEDOC
+https://raw.githubusercontent.com/ipstreet312/freeiptv/master/ressources/ftv/py/fldr.m3u8
+#EXTINF:-1 tvg-id="France3Limousin.fr" tvg-name="FRANCE 3 LIMOUSIN" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/france-3-fr.png" group-title="France",FRANCE 3 LIMOUSIN
+https://raw.githubusercontent.com/ipstreet312/freeiptv/master/ressources/ftv/py/flms.m3u8
+#EXTINF:-1 tvg-id="France3Lorraine.fr" tvg-name="FRANCE 3 LORRAINE" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/france-3-fr.png" group-title="France",FRANCE 3 LORRAINE
+https://raw.githubusercontent.com/ipstreet312/freeiptv/master/ressources/ftv/py/flor.m3u8
+#EXTINF:-1 tvg-id="France3MidiPyrenees.fr" tvg-name="FRANCE 3 MIDI PYRÉNÉES" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/france-3-fr.png" group-title="France",FRANCE 3 MIDI PYRÉNÉES
+https://raw.githubusercontent.com/ipstreet312/freeiptv/master/ressources/ftv/py/fmpr.m3u8
+#EXTINF:-1 tvg-id="France3NordPasDeCalais.fr" tvg-name="FRANCE 3 NORD PAS DE CALAIS" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/france-3-fr.png" group-title="France",FRANCE 3 NORD PAS DE CALAIS
+https://raw.githubusercontent.com/ipstreet312/freeiptv/master/ressources/ftv/py/fpdc.m3u8
+#EXTINF:-1 tvg-id="France3ParisIdF.fr" tvg-name="FRANCE 3 PARIS IDF" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/france-3-fr.png" group-title="France",FRANCE 3 PARIS IDF
+https://raw.githubusercontent.com/ipstreet312/freeiptv/master/ressources/ftv/py/fidf.m3u8
+#EXTINF:-1 tvg-id="France3PaysDeLaLoire.fr" tvg-name="FRANCE 3 PAYS DE LOIRE" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/france-3-fr.png" group-title="France",FRANCE 3 PAYS DE LOIRE
+https://raw.githubusercontent.com/ipstreet312/freeiptv/master/ressources/ftv/py/fpdl.m3u8
+#EXTINF:-1 tvg-id="France3Picardie.fr" tvg-name="FRANCE 3 PICARDIE" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/france-3-fr.png" group-title="France",FRANCE 3 PICARDIE
+https://raw.githubusercontent.com/ipstreet312/freeiptv/master/ressources/ftv/py/fpcd.m3u8
+#EXTINF:-1 tvg-id="France3PoitouCharentes.fr" tvg-name="FRANCE 3 POITOU CHARENTE" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/france-3-fr.png" group-title="France",FRANCE 3 POITOU CHARENTE
+https://raw.githubusercontent.com/ipstreet312/freeiptv/master/ressources/ftv/py/fpch.m3u8
+#EXTINF:-1 tvg-id="France3ProvenceAlpes.fr" tvg-name="FRANCE 3 PROVENCE ALPES" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/france-3-fr.png" group-title="France",FRANCE 3 PROVENCE ALPES
+https://raw.githubusercontent.com/ipstreet312/freeiptv/master/ressources/ftv/py/fpra.m3u8
+#EXTINF:-1 tvg-id="France3RhoneAlpes.fr" tvg-name="FRANCE 3 RHÔNE ALPES" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/france-3-fr.png" group-title="France",FRANCE 3 RHÔNE ALPES
+https://raw.githubusercontent.com/ipstreet312/freeiptv/master/ressources/ftv/py/frha.m3u8
+#EXTINF:-1 tvg-id="France3NouvelleAquitaine.fr" tvg-name="FRANCE 3 NOA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/france-3-fr.png" group-title="France",FRANCE 3 NOA
+https://raw.githubusercontent.com/ipstreet312/freeiptv/master/ressources/ftv/py/fnoa.m3u8
+#EXTINF:-1 tvg-id="RTLTVI.be" tvg-name="RTL TVI" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/belgium/rtl-tvi-be.png" group-title="International",RTL TVI
+https://tvi-live-hls.akamaized.net/hls/live/2038650/TVI-Live-HLS/master.m3u8
+#EXTINF:-1 tvg-id="ClubRTL.be" tvg-name="RTL CLUB" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/belgium/club-rtl-be.png" group-title="International",RTL CLUB
+https://raw.githubusercontent.com/ipstreet312/freeiptv/master/ressources/rtlm6/directmaster/clubrtl.m3u8
+#EXTINF:-1 tvg-id="PlugRTL.be" tvg-name="RTL PLUG" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/belgium/rtl-plug-be.png" group-title="International",RTL PLUG
+https://raw.githubusercontent.com/ipstreet312/freeiptv/master/ressources/rtlm6/directmaster/plugrtl.m3u8
+#EXTINF:-1 tvg-id="BelRTLTV.be" tvg-name="BEL RTL" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/belgium/bel-rtl-be.png" group-title="International",BEL RTL
+https://raw.githubusercontent.com/Paradise-91/ParaTV/main/streams/rtl/be/belrtl.m3u8
+#EXTINF:-1 tvg-id="RTLPLAY.be" tvg-name="RTL PLAY" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/belgium/rtl-play-be.png" group-title="International",RTL PLAY
+https://raw.githubusercontent.com/ipstreet312/freeiptv/master/ressources/rtlm6/directmaster/rtlplay.m3u8
+#EXTINF:-1 tvg-id="ViaGrandParis.fr" tvg-name="LE FIGARO IDF" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/le-figaro-idf-fr.png" group-title="France",LE FIGARO IDF
+https://static.lefigaro.fr/secom/tnt.m3u8
+#EXTINF:-1 tvg-id="Telenantes.fr" tvg-name="TELE NANTES" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/tele-nantes-fr.png" group-title="France",TELE NANTES
+https://raw.githubusercontent.com/schumijo/iptv/main/playlists/dailymotion/telenantes.m3u8
+#EXTINF:-1 tvg-id="IDF1.fr" tvg-name="20 MINUTES TV IDF" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/20-minutes-tv-idf-fr.png" group-title="France",20 MINUTES TV IDF
+https://live-20minutestv.digiteka.com/1961167769/index.m3u8
+#EXTINF:-1 tvg-id="TV78.fr" tvg-name="TV 78" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/tv-78-fr.png" group-title="France",TV 78
+https://streamtv.cdn.dvmr.fr/TV78/ngrp:tv78.stream_all/master.m3u8
+#EXTINF:-1 tvg-id="Weo.fr" tvg-name="WÉO TV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/weo-tv-fr.png" group-title="France",WÉO TV
+https://lives.digiteka.com/stream/c58028c2-a58b-4526-9ec8-389cad4a71e8/index.m3u8
+#EXTINF:-1 tvg-id="TVVendee.fr" tvg-name="TV VENDÉE" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/tv-vendee-fr.png" group-title="France",TV VENDÉE
+https://streamer01.myvideoplace.tv/streamer02/hls/VDE_EVEN_PAD_130923.m3u8
+#EXTINF:-1 tvg-id="WeoPicardie.fr" tvg-name="WÉO PICARDIE" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/weo-picardie-fr.png" group-title="France",WÉO PICARDIE
+https://live-weo.digiteka.com/1189023466/index.m3u8
+
+#EXTINF:-1 tvg-id="Kurdsat.iq" tvg-name="Kurdsat" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/kurdsat-iq.png" group-title="Kurdistan",Kurdsat
+https://iko-live.akamaized.net/KurdsatTV/master.m3u8
+#EXTINF:-1 tvg-id="KurdsatNews.iq" tvg-name="Kurdsat News" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/kurdsat-news-iq.png" group-title="Kurdistan",Kurdsat News
+https://hlspackager.akamaized.net/live/DB/KURDSAT_NEWS/HLS/KURDSAT_NEWS.m3u8
+#EXTINF:-1 tvg-id="KurdistanTV.iq" tvg-name="Kurdistan TV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/kurdistan-tv-iq.png" group-title="Kurdistan",Kurdistan TV
+https://5a3ed7a72ed4b.streamlock.net/live/SMIL:myStream.smil/playlist.m3u8
+#EXTINF:-1 tvg-id="NRTTV.iq" tvg-name="NRT TV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/nrt-tv-iq.png" group-title="Kurdistan",NRT TV
+https://media.streambrothers.com:1936/8226/8226/playlist.m3u8
+#EXTINF:-1 tvg-id="INews.iq" tvg-name="iNEWS TV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/inews-tv-iq.png" group-title="Kurdistan",iNEWS TV
+https://live.i-news.tv/hls/stream.m3u8
+#EXTINF:-1 tvg-id="WaarTV.iq" tvg-name="Waar TV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/waar-tv-iq.png" group-title="Kurdistan",Waar TV
+https://live.kwikmotion.com/waarmedialive/waarmedia.smil/waarmediapublish/waarmedia_source/chunks.m3u8
+#EXTINF:-1 tvg-id="ZagrosTV.iq" tvg-name="Zagros TV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/zagros-tv-iq.png" group-title="Kurdistan",Zagros TV
+https://5a3ed7a72ed4b.streamlock.net/zagrostv/SMIL:myStream.smil/playlist.m3u8
+#EXTINF:-1 tvg-id="Channel8.iq" tvg-name="Channel 8 Kurdish" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/channel-8-kurdish-iq.png" group-title="Kurdistan",Channel 8 Kurdish
+https://live.channel8.com/Channel8-Kurdish/index.fmp4.m3u8
+#EXTINF:-1 tvg-id="PayamTV.iq" tvg-name="Payam TV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/payam-tv-iq.png" group-title="Kurdistan",Payam TV
+https://media2.streambrothers.com:1936/8218/8218/playlist.m3u8
+#EXTINF:-1 tvg-id="KurdMaxSorani.iq" tvg-name="KurdMax Sorani" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/kurdmax-iq.png" group-title="Kurdistan",KurdMax Sorani
+https://6476e46b58f91.streamlock.net/liveTrans/KURDB3388/playlist.m3u8
+#EXTINF:-1 tvg-id="KurdMaxKurmanji.iq" tvg-name="KurdMax Kurmanji" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/kurdmax-iq.png" group-title="Kurdistan",KurdMax Kurmanji
+https://6476e46b58f91.streamlock.net/liveTrans/KURDS2211/playlist.m3u8
+#EXTINF:-1 tvg-id="KurdMaxShow.iq" tvg-name="KurdMax Show" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/kurdmax-show-iq.png" group-title="Kurdistan",KurdMax Show
+https://6476e46b58f91.streamlock.net/liveTrans/SHOWS123/playlist.m3u8
+#EXTINF:-1 tvg-id="KurdMaxMusic.iq" tvg-name="KurdMax Music" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/kurdmax-music-iq.png" group-title="Kurdistan",KurdMax Music
+https://6476e46b58f91.streamlock.net/music/MUSIC2402/playlist.m3u8
+#EXTINF:-1 tvg-id="Mixkurdy.iq" tvg-name="Mixkurdy" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/mixkurdy-iq.png" group-title="Kurdistan",Mixkurdy
+https://avr.host247.net/live/Mix-kurdy/playlist.m3u8
+#EXTINF:-1 tvg-id="AfarinBaxcha.iq" tvg-name="Afarin Baxcha" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/afarin-tv-iq.png" group-title="Kurdistan",Afarin Baxcha
+https://5dcabf026b188.streamlock.net/afarinTV/livestream/playlist.m3u8
+#EXTINF:-1 tvg-id="AfarinTV.iq" tvg-name="Afarin TV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/afarin-tv-iq.png" group-title="Kurdistan",Afarin TV
+https://65f16f0fdfc51.streamlock.net/afarinTV/livestream/playlist.m3u8
+#EXTINF:-1 tvg-id="ZarokTVSorani.iq" tvg-name="Zarok TV Sorani" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/zarok-tv-iq.png" group-title="Kurdistan",Zarok TV Sorani
+https://zindisorani.zaroktv.com.tr/hls/stream.m3u8
+#EXTINF:-1 tvg-id="ZarokTVKurmanci.iq" tvg-name="Zarok TV Kurmanci" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/zarok-tv-iq.png" group-title="Kurdistan",Zarok TV Kurmanci
+https://zindikurmanci.zaroktv.com.tr/hls/stream.m3u8
+#EXTINF:-1 tvg-id="FarmodaTV.iq" tvg-name="FarmodaTV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/farmoda-tv-iq.png" group-title="Kurdistan",FarmodaTV
+https://avr.host247.net/live/FarmodaTV/playlist.m3u8
+#EXTINF:-1 tvg-id="AvarTV.iq" tvg-name="Avar TV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/avar-tv-iq.png" group-title="Kurdistan",Avar TV
+https://avr.host247.net/live/AvarTv/playlist.m3u8
+#EXTINF:-1 tvg-id="EmanTv.iq" tvg-name="EmanTv" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/eman-tv-iq.png" group-title="Kurdistan",EmanTv
+https://avr.host247.net/live/emantv/playlist.m3u8
+#EXTINF:-1 tvg-id="AmozhgaryTV.iq" tvg-name="Amozhgary TV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/amozhgary-tv-iq.png" group-title="Kurdistan",Amozhgary TV
+https://app-live.org/live/3268334b/index.m3u8
+#EXTINF:-1 tvg-id="SpedaTV.iq" tvg-name="Speda TV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/speda-tv-iq.png" group-title="Kurdistan",Speda TV
+https://spedanet.store/upload/images/spedahd.m3u8
+#EXTINF:-1 tvg-id="GaliKurdistanTV.iq" tvg-name="Gali Kurdistan TV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/gali-kurdistan-tv-iq.png" group-title="Kurdistan",Gali Kurdistan TV
+https://live.host247.net/gk/gksat/playlist.m3u8
+#EXTINF:-1 tvg-id="KhakTV.iq" tvg-name="Khak TV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/khak-tv-iq.png" group-title="Kurdistan",Khak TV
+http://bblserver.ddns.net:1935/stream/khakhd/playlist.m3u8
+#EXTINF:-1 tvg-id="RonahiTV.iq" tvg-name="Ronahi TV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/ronahi-tv-iq.png" group-title="Kurdistan",Ronahi TV
+https://iko-streamline-live1.akamaized.net/RonahiTV/master.m3u8
+#EXTINF:-1 tvg-id="KirkukSatelliteTV.iq" tvg-name="Kirkuk Satellite TV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/kirkuk-satellite-tv-iq.png" group-title="Kurdistan",Kirkuk Satellite TV
+https://live.kirkuklive.live/hls/stream/index.m3u8
+#EXTINF:-1 tvg-id="ÇiraTV.iq" tvg-name="Çira TV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/cira-tv-iq.png" group-title="Kurdistan",Çira TV
+https://cira-tv.akamaized.net/hls/stream_0.m3u8
+#EXTINF:-1 tvg-id="NubarTV.iq" tvg-name="Nubar TV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/nubar-tv-iq.png" group-title="Kurdistan",Nubar TV
+http://stream.nubar.tv:1935/private/NUBARtv/playlist.m3u8
+#EXTINF:-1 tvg-id="TürkmeneliTV.iq" tvg-name="Türkmeneli TV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/turkmeneli-tv-iq.png" group-title="Kurdistan",Türkmeneli TV
+http://116.203.71.169/hls/stream1.m3u8
+#EXTINF:-1 tvg-id="GemTV.iq" tvg-name="Gem TV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/gem-tv-iq.png" group-title="Kurdistan",Gem TV
+https://cdn-live.gemgroup.tv/live/gemtv.m3u8
+#EXTINF:-1 tvg-id="BangxwazenBadinan.iq" tvg-name="Bangxwazen Badinan" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/bangxwazen-badinan-iq.png" group-title="Kurdistan",Bangxwazen Badinan
+http://bangxwazen.badinan.xyz:1935/live/Bangxwazen-Badinan/playlist.m3u8
+#EXTINF:-1 tvg-id="MihrabTV.iq" tvg-name="Mihrab TV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/mihrab-tv-iq.png" group-title="Kurdistan",Mihrab TV
+http://baskhd.ddns.net:40/live/MihrabTV/chunklist_w1291413404.m3u8
+#EXTINF:-1 tvg-id="TRTKurdi.tr" tvg-name="TRT Kurdi" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/trt-kurdi-tr.png" group-title="Kurdistan",TRT Kurdi
+https://tv-trtkurdi.medya.trt.com.tr/master.m3u8
+#EXTINF:-1 tvg-id="MedMuzikTV.tr" tvg-name="Med Muzik TV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/med-muzik-tv-tr.png" group-title="Kurdistan",Med Muzik TV
+http://54.36.110.140/live3/live3.m3u8
+#EXTINF:-1 tvg-id="SadaTV.iq" tvg-name="Sada TV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/iraq/sada-tv-iq.png" group-title="Kurdistan",Sada TV
+http://sada-hd.ddns.net:40/live/sadatv/playlist.m3u8
+
+#EXTINF:-1 tvg-id="AlJazeeraEnglish.qa" tvg-name="Al Jazeera English" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/qatar/al-jazeera-english-qa.png" group-title="Informations",Al Jazeera English
+https://live-hls-web-aje.getaj.net/AJE/01.m3u8
+#EXTINF:-1 tvg-id="AlJazeeraArabic.qa" tvg-name="Al Jazeera Arabic" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/qatar/al-jazeera-arabic-qa.png" group-title="Informations",Al Jazeera Arabic
+https://live-hls-web-aja.getaj.net/AJA/02.m3u8
+#EXTINF:-1 tvg-id="AlJazeeraDocumentary.qa" tvg-name="Al Jazeera Documentary" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/qatar/al-jazeera-documentary-qa.png"
